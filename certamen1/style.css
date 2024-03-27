@@ -1,0 +1,164 @@
+/* Estilos Generales */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: #f4f4f4;
+    color: #333;
+}
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    font-weight: bold;
+}
+/* Estilos de la Barra de Navegación */
+nav {
+    background: #fff;
+    border-bottom: 1px solid #eaeaea;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+nav a:hover {
+    background: #eaeaea;
+}
+
+/* Estilo del Header con Imagen de Fondo y Texto */
+header {
+    position: relative;
+    height: 100vh;
+    background: url('header.webp') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    color: #fff;
+    text-shadow: 2px 2px 4px #000;
+
+}
+
+/* Estilos para la Galería de Imágenes */
+.gallery-wrapper {
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    overflow:visible; /* Prevents overflow from being visible */
+    width: 100%; /* Full width of the container */
+    height: max-content;
+  }
+  
+  .gallery-container {
+    display: flex;
+    gap: 10px; /* Adjust the space between images as needed */
+    transition: transform 1s ease;
+  }
+  
+  .gallery-item {
+    line-height: 0; /* Removes extra space below images */
+    position: relative;
+    background-size: cover;
+    width: 200px; /* Example width */
+    height: 150px; /* Example height */
+    transition: background-image 0.5s ease;
+  
+  }
+  
+  .gallery-item img {
+    display: block; /* Removes extra space below images */
+    width: 100px; /* Initial width of images */
+    height: 100%;
+    transition: transform 0.5s ease;
+  }
+  
+  /* Scale image on hover and move siblings aside */
+  .gallery-item:hover {
+    transform: scale(3); /* Adjust the scale factor as needed */
+    z-index: 2;
+  }
+  
+  /* Ensures the scaled image will push other items */
+  .gallery-item:hover ~ .gallery-item {
+    transform: translateX(50%); /* Adjust the percentage as needed */
+  }
+  
+  /* Responsive design adjustments */
+  @media (max-width: 768px) {
+    .gallery-item img {
+      width: 80px; /* Smaller images on smaller screens */
+    }
+    .gallery-item:hover ~ .gallery-item {
+      transform: translateX(30%); /* Less translation on smaller screens */
+    }
+  }
+  
+  /* Optional: Hide the scrollbar across all browsers */
+  .gallery-wrapper {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  
+  .gallery-wrapper::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+  }
+  
+
+/* Estilos de la Sección Personal */
+section img {
+    max-width: 100px; /* Ajusta este tamaño como lo necesites */
+    border-radius: 50%;
+    margin: 20px 0;
+}
+
+/* Estilos para los Enlaces de Tecnología */
+section a {
+    display: inline-block;
+    margin: 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+/* Estilo del Footer */
+footer {
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: #333;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+footer a:hover {
+    background: #eaeaea;
+}
+
+/* Estilos para el diseño Responsivo */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    header {
+        height: 50vh;
+    }
+
+    footer {
+        padding: 10px;
+    }
+}
