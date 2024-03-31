@@ -3,59 +3,85 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tu Página Web</title>
-<!-- Aquí podrías enlazar tu archivo CSS para estilos personalizados -->
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <!-- Barra de navegación -->
 <div>
-    <nav>
-        <a href="#"><img src="icono_tema.png" alt="Icono del tema"></a>
-        <a href="pagina1.html">Página 1</a>
-        <a href="pagina2.html">Página 2</a>
-        <a href="pagina3.html">Página 3</a>
-        <a href="pagina_externa.html" target="_blank">Página Externa</a>
+    <nav class="navbar">
+        <a href="#" class="logo-link"><img src="./assets/img/logo.png" alt="Logo de Sora" class="logo"></a>
+        <ul class="nav-menu">
+            <li><a href="#Inicio" class="navlink">Inicio</a></li>
+            <li><a href="#Galeria" class="navlink">Galería</a></li>
+            <li><a href="#about-me" class="navlink">About_Me</a></li>
+            <li><a href="#Tecnologias" class="navlink">Tecnologías</a></li>
+        </ul>
     </nav>
 </div>
 
+
+
 <!-- Imagen de fondo con texto central -->
-<div>
+<div id="Inicio">
     <header>
-        <h1>Texto Relacionado con tu Tema</h1>
+        <h1>SORA</h1>
     </header>
 </div>
 
 <!-- Galería de imágenes -->
+<h1 id="Galeria" style="display: flex; justify-content: center; margin-top: 6rem;">Galería</h1>
+<p style="display: flex; justify-content: center; margin-top: 0.5rem;">Pasa el mouse sobre las imágenes para verlas en movimiento</p>
+<p style="display: flex; justify-content: center; margin-top: 0.5rem;">Haz click para ver sus prompt y el video completo en YouTube</p>
 <div class="gallery-wrapper">
     <div class="gallery-container">
-        <div class="gallery-item" style="background-image: url('car-mountain-preview.png');" onmouseover="this.style.backgroundImage='url(\'car-mountain.webp\')'" onmouseout="this.style.backgroundImage='url(\'car-mountain-preview.png\')'"></div>
-        <div class="gallery-item" style="background-image: url('italian-pup-preview.png');" onmouseover="this.style.backgroundImage='url(\'italian-pup.webp\')'" onmouseout="this.style.backgroundImage='url(\'italian-pup-preview.png\')'"></div>
-        <div class="gallery-item" style="background-image: url('transition-preview.png');" onmouseover="this.style.backgroundImage='url(\'transition.webp\')'" onmouseout="this.style.backgroundImage='url(\'transition-preview.png\')'"></div>
-        <div class="gallery-item" style="background-image: url('train-window-preview.png');" onmouseover="this.style.backgroundImage='url(\'train-window.webp\')'" onmouseout="this.style.backgroundImage='url(\'train-window-preview.png\')'"></div>
-        <div class="gallery-item" style="background-image: url('dragon-preview.png');" onmouseover="this.style.backgroundImage='url(\'dragon.webp\')'" onmouseout="this.style.backgroundImage='url(\'dragon-preview.png\')'"></div>
-        <!-- ... other items -->
-      </div>
-        </div>
-  
-  
-<!-- Sección personal -->
-<div>
-    <section>
-        <h2>Sobre Mí</h2>
-        <img src="tu_foto.jpg" alt="Tu Foto">
-        <p>Datos personales, intereses personales, lenguajes de programación conocidos, intereses de capacitación y laborales.</p>
-    </section>
+        <a href="https://youtu.be/3rlI6s98LRY?si=41GmQ_wMuVVltiQx"><div class="gallery-item" style="background-image: url('./assets/img/car-mountain-preview.png');" onmouseover="this.style.backgroundImage='url(\'./assets/webp/car-mountain.webp\')'" onmouseout="this.style.backgroundImage='url(\'./assets/img/car-mountain-preview.png\')'"></div></a>
+        <a href="https://www.youtube.com/watch?v=w-oG1spDh0Q"><div class="gallery-item" style="background-image: url('./assets/img/italian-pup-preview.png');" onmouseover="this.style.backgroundImage='url(\'./assets/webp/italian-pup.webp\')'" onmouseout="this.style.backgroundImage='url(\'./assets/img/italian-pup-preview.png\')'"></div></a>
+        <a href="https://www.youtube.com/watch?v=G4wJ4WeJrz4"><div class="gallery-item" style="background-image: url('./assets/img/airhead-preview.png');" onmouseover="this.style.backgroundImage='url(\'./assets/webp/airhead.webp\')'" onmouseout="this.style.backgroundImage='url(\'./assets/img/airhead-preview.png\')'"></div></a>
+        <a href="https://www.youtube.com/watch?v=PN3hOyViCEo"><div class="gallery-item" style="background-image: url('./assets/img/train-window-preview.png');" onmouseover="this.style.backgroundImage='url(\'./assets/webp/train-window.webp\')'" onmouseout="this.style.backgroundImage='url(\'./assets/img/train-window-preview.png\')'"></div></a>
+        <a href="https://www.youtube.com/watch?v=LXJ-yLiktDU"><div class="gallery-item" style="background-image: url('./assets/img/dragon-preview.png');" onmouseover="this.style.backgroundImage='url(\'./assets/webp/dragon.webp\')'" onmouseout="this.style.backgroundImage='url(\'./assets/img/dragon-preview.png\')'"></div></a>
+    </div>
+</div>
+<!-- Texto descriptivo -->
+<div class="sora-description">
+    <p>Sora es una vanguardista tecnología de inteligencia artificial de OpenAI, diseñada para revolucionar la forma en que se crean y visualizan los videos. Utilizando avanzados algoritmos de aprendizaje automático, Sora puede generar contenidos visuales de alta fidelidad a partir de simples descripciones textuales, abriendo nuevas posibilidades en el campo de la creación de contenido digital.</p>
+    <p>La magia detrás de Sora reside en su capacidad para interpretar conceptos e ideas humanas y convertirlas en secuencias de video complejas y detalladas. Esta tecnología no solo simplifica el proceso creativo, sino que también permite la personalización masiva de contenidos visuales a una escala previamente inimaginable.</p>
+    <p>Con el potencial de transformar industrias enteras, desde el entretenimiento hasta la educación, Sora marca el comienzo de una nueva era donde la inteligencia artificial y la creatividad humana se combinan para expandir los límites de nuestra imaginación.</p>
+</div>
+<div class="gallery-container">
+    <a href="https://www.youtube.com/watch?v=bAXdBd_6Dmo"><div class="gallery-item" style="background-image: url('./assets/img/santorini-preview.png');" onmouseover="this.style.backgroundImage='url(\'./assets/webp/santorini.webp\')'" onmouseout="this.style.backgroundImage='url(\'./assets/img/santorini-preview.png\')'"></div></a>
+    <a href="https://www.youtube.com/watch?v=94PaJHpBfBQ"><div class="gallery-item" style="background-image: url('./assets/img/old-man-preview.png');" onmouseover="this.style.backgroundImage='url(\'./assets/webp/old-man.webp\')'" onmouseout="this.style.backgroundImage='url(\'./assets/img/old-man-preview.png\')'"></div></a>
+    <a href="https://www.youtube.com/watch?v=NiCjRRs1gJ4"><div class="gallery-item" style="background-image: url('./assets/img/teles-preview.png');" onmouseover="this.style.backgroundImage='url(\'./assets/webp/teles.webp\')'" onmouseout="this.style.backgroundImage='url(\'./assets/img/teles-preview.png\')'"></div></a>
+    <a href="https://www.youtube.com/watch?v=yKaLZEW_LUY"><div class="gallery-item" style="background-image: url('./assets/img/cat-bed-preview.png');" onmouseover="this.style.backgroundImage='url(\'./assets/webp/cat-bed.webp\')'" onmouseout="this.style.backgroundImage='url(\'./assets/img/cat-bed-preview.png\')'"></div></a>
+    <a href="https://www.youtube.com/watch?v=TfdQXoddt4Q"><div class="gallery-item" style="background-image: url('./assets/img/tokyo-preview.png');" onmouseover="this.style.backgroundImage='url(\'./assets/webp/tokyo.webp\')'" onmouseout="this.style.backgroundImage='url(\'./assets/img/tokyo-preview.png\')'"></div></a>
 </div>
 
+<!-- Sección personal -->
+<div id="about-me">
+    <h2>About_me</h2>
+    <div class="about-content">
+        <div class="about-text">
+            <p>Hello</p>
+            <p>Me llamo Diego pero casi todos me dicen Yeyo.</p> 
+            <p>Apasionado en el área del desarrollo de videojuegos y desarrollo de IA en general.</p> 
+            <p>Actualmente uso Python, HTML/CSS JavaScript y C# (enfocado en Unity) y he hecho diferentes proyectos pequeños para subir de nivel mis skills pasivas en estos lenguajes cada vez un poco más.</p>
+            <p>En mi tiempo libre me encanta jugar Monster Hunter, ver mi granjita en el Stardew Valley, tocar batería y andar en bici.</p>
+            <p>Mi meta actualmente es terminar mi carrera y profundizar mucho más en las nuevas tecnologías y como aplicarlas eficazmente de maneras nunca antes vistas.</p>
+        </div>
+    </div>
+    <a href="https://www.GitHub.com/Yeyobitz" ><img src="./assets/img/yeyo-T.png" alt="Tu Foto" class="about-image"></a>
+    <p style="display: flex; justify-content: center; margin-top: 1rem;">🢁 GITHUB 🢁</p>
+</div>
+
+
 <!-- Links a tecnologías -->
-<div>
+<div id="Tecnologias">
     <section>
         <h2>Tecnologías</h2>
-        <a href="https://aws.amazon.com">AWS</a>
-        <a href="https://cloud.google.com">Google Cloud</a>
-        <!-- Agrega más enlaces aquí -->
+        <a href="https://openai.com/">OpenAI</a>
+        <a href="https://openai.com/sora">SORA</a>
+        <a href="https://openai.com/gpt-4">GPT-4</a>
+        <a href="https://openai.com/dall-e-3">DALL·E 3</a>
     </section>
 </div>
 
