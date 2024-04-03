@@ -444,6 +444,7 @@ section a {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .footer-content {
