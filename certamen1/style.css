@@ -528,3 +528,83 @@ section a {
 .footer-bottom {
   text-align: center;
   margin: 0 auto;}
+
+
+  .proyectos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 0 1rem; 
+  }
+  .proyectos-item {
+    flex: 1; 
+    min-width: 300px; 
+    background: #333;
+    color: #fff; 
+    padding: 20px; 
+    margin: 10px;
+    border-radius: 10px; 
+  }
+  .proyectos-botones-lenguaje {
+    display: flex;
+    justify-content: left;
+    gap: 10px; 
+    margin: 10px 0;
+    padding-left: 10px;
+  }
+
+  .botones-lenguaje {
+    display: flex;
+    align-items: center;
+    background-color: #01131c;
+    padding: 5px 10px;
+    border-radius: 10%;
+    transition: 0.3s;
+  }
+  .botones-lenguaje img {
+    width: 30px; 
+    height: auto; 
+    margin-right: 5px;
+  }
+  .botones-lenguaje span {
+    margin-left: 5px;
+  }
+
+  .botones-lenguaje:hover {
+    background-color: #16688e;
+  }
+  .proyectos-botones {
+    display: flex;
+    justify-content: left;
+    gap: 10px; 
+    margin: 10px 10px; 
+  }
+  .boton-accion {
+      display: flex;
+      align-items: center;
+      background-color: #01131c;
+      padding: 5px 10px;
+      border-radius: 10px;
+      color: #fff;
+      text-decoration: none;
+      transition: 0.3s;
+      text-transform: uppercase;
+      cursor: pointer; /* Igual que .boton-lenguaje */
+  }
+  .boton-accion img {
+    width: 30px; 
+    height: auto; 
+    margin-right: 5px;
+  }
+  .boton-accion a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .boton-accion:hover {
+      background-color: #16688e;
+  }
+  .proyectos-item img {
+    max-width: 100%; 
+    height: auto; 
+  }
