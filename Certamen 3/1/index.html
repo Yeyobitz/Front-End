@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Préstamos</title>
+</head>
+<body>
+    <h1>Formulario de Préstamos</h1>
+    <form id="loanForm">
+        <label for="nombreCliente">Nombre Cliente:</label>
+        <input type="text" id="nombreCliente" name="nombreCliente" required><br><br>
+
+        <label for="tipoPrestamo">Tipo Préstamo:</label>
+        <select id="tipoPrestamo" name="tipoPrestamo" required>
+            <option value="Hipotecario">Hipotecario</option>
+            <option value="Automotriz">Automotriz</option>
+            <option value="Consumo">Consumo</option>
+        </select><br><br>
+
+        <button type="button" onclick="agregarPrestamo()">Agregar Préstamo</button>
+        <button type="button" onclick="mostrarResumen()">Resumen</button>
+    </form>
+
+    <h2>Resumen de Préstamos</h2>
+    <div id="resumen"></div>
+
+    <script>
+        let prestamos = {
+            Hipotecario: 0,
+            Automotriz: 0,
+            Consumo: 0
+        };
+
+        function agregarPrestamo() {
+            const tipo = document.getElementById('tipoPrestamo').value;
+            prestamos[tipo]++;
+            alert('Préstamo agregado!');
+        }
+
+        function mostrarResumen() {
+            const resumenDiv = document.getElementById('resumen');
+            resumenDiv.innerHTML = `
+                <p>Hipotecarios: ${prestamos.Hipotecario}</p>
+                <p>Automotriz: ${prestamos.Automotriz}</p>
+                <p>Consumo: ${prestamos.Consumo}</p>
+            `;
+        }
+    </script>
+</body>
+</html>

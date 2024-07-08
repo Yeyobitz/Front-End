@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Ventas</title>
+</head>
+<body>
+    <h1>Formulario de Ventas de Productos</h1>
+    <form id="productForm">
+        <label for="nombreProducto">Nombre Producto:</label>
+        <input type="text" id="nombreProducto" name="nombreProducto" required><br><br>
+
+        <label for="valorProducto">Valor Producto:</label>
+        <input type="number" id="valorProducto" name="valorProducto" required><br><br>
+
+        <button type="button" onclick="agregarProducto()">Agregar Producto</button>
+    </form>
+
+    <h2>Datos de Productos</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nombre Producto</th>
+                <th>Valor Producto</th>
+                <th>IVA Producto</th>
+                <th>Total más IVA</th>
+            </tr>
+        </thead>
+        <tbody id="tablaProductos">
+        </tbody>
+    </table>
+
+    <script>
+        function agregarProducto() {
+            const nombre = document.getElementById('nombreProducto').value;
+            const valor = parseFloat(document.getElementById('valorProducto').value);
+            const iva = valor * 0.19;
+            const total = valor + iva;
+
+            const tabla = document.getElementById('tablaProductos');
+            const nuevaFila = tabla.insertRow();
+
+            const celdaNombre = nuevaFila.insertCell(0);
+            const celdaValor = nuevaFila.insertCell(1);
+            const celdaIva = nuevaFila.insertCell(2);
+            const celdaTotal = nuevaFila.insertCell(3);
+
+            celdaNombre.innerText = nombre;
+            celdaValor.innerText = valor.toFixed(2);
+            celdaIva.innerText = iva.toFixed(2);
+            celdaTotal.innerText = total.toFixed(2);
+        }
+    </script>
+</body>
+</html>
